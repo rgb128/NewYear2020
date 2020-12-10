@@ -1,3 +1,18 @@
+@font-face{
+    font-family: "Public Sans";
+    src: url("./fonts/PublicSans-Regular.ttf") format('ttf');
+    src: url("./fonts/PublicSans-Regular.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transform-origin: center center;
+}
+
 #loading{
     position: fixed;
     top: 0px;
@@ -6,6 +21,73 @@
     height: 100%;
     background-color: #333333;
 }
-#text{
+
+#loading .text-container{
     position: absolute;
+    width: 100%;
+    line-height: 10vh;
+    font-size: 8vh;
+    top: 20vh;
+    left: 0px;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Arial", "Public Sans";
+    perspective: 100vh;
+    perspective-origin: center center;
+    transform-style: preserve-3d;
+    animation: top-bottom 2.9s ease-in-out 0s infinite;
+}
+
+#loading .text{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 10vh;
+    color: #ffffff;
+    transform: rotateY(116deg);
+    transform-style: preserve-3d;
+    animation: around 1.7s linear 0s infinite;
+}
+
+#loading .text1{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 10vh;
+    transform: translateZ(1px);
+    backface-visibility: hidden;
+}
+#loading .text2{
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 10vh;
+    transform: rotateY(180deg) translateZ(-1px);
+    backface-visibility: hidden;
+}
+
+@keyframes top-bottom {
+    0%{
+        top: 20vh;
+    }
+    50%{
+        top: 70vh;
+    }
+    100%{
+        top: 20vh;
+    }
+}
+@keyframes around {
+    0%{
+        transform: rotateY(0deg);
+    }
+    50%{
+        transform: rotateY(180deg);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
 }
