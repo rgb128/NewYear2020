@@ -1,4 +1,69 @@
-@font-face {
-    font-family: "Public Sans";
-    src: url("./fonts/Public-Sans-Roman-VF.ttf");
+/* <div class="big-blocc" id="white-noise"></div>
+<div class="big-blocc" id="good-final"></div>
+<div class="big-blocc" id="bad-final"></div>
+<div class="big-blocc" id="anna-final"></div>
+<div class="big-blocc" id="christmas-tree"></div>
+<div class="big-blocc" id="janukovich"></div> */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    transform-origin: center center;
+    user-select: none;
+}
+
+.big-block{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+}
+
+#christmas-tree{
+    z-index: 10;
+    background-image: url("./media/tree.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#good-final{
+    z-index: 9;
+    background-image: url("./media/good_final.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+#bad-final{
+    z-index: 9;
+    background-image: url("./media/bad_final.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+#button{
+    position: fixed;
+    width: fit-content;
+    height: 10vh;
+    font-size: 7vh;
+    line-height: 10vh;
+    background-color: #0f0;
+    color: #fff;
+    z-index: 500;
+    top: 45vh;
+    padding: 0px 5vw;
+    border-radius: 3vw;
+}
+
+#button.bad-idea{
+    background-color: #f00;
+}
+
+#anna-final{
+    display: none;
+    z-index: 8;
+    background-image: url("./media/bad_final.jpg");
+    background-size: contain;
+    background-position: center center;
 }
